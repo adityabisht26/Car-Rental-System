@@ -1,10 +1,10 @@
 import java.util.*;
 
 class Car {
-    private String carId;
-    private String brand;
-    private String model;
-    private double basePricePerDay;
+    private final String carId;
+    private final String brand;
+    private final String model;
+    private final double basePricePerDay;
     private boolean isAvailable;
 //Constructor
     public Car(String carId, String brand, String model, double basePricePerDay) {
@@ -45,9 +45,9 @@ class Car {
 }
 
 class Customer {
-    private String customerId;
-    private String name;
-    private String phoneNumber;
+    private final String customerId;
+    private final String name;
+    private final String phoneNumber;
 
     public Customer(String customerId, String name, String phoneNumber) {
         this.customerId = customerId;
@@ -69,9 +69,9 @@ class Customer {
 }
 
 class Rental {
-    private Car car;
-    private Customer customer;
-    private int days;
+    private final Car car;
+    private final Customer customer;
+    private final int days;
 
     public Rental(Car car, Customer customer, int days) {
         this.car = car;
@@ -93,9 +93,9 @@ class Rental {
 }
 
 class CarRentalSystem {
-    private List<Car> cars;
-    private List<Customer> customers;
-    private List<Rental> rentals;
+    private final List<Car> cars;
+    private final List<Customer> customers;
+    private final  List<Rental> rentals;
 
     public CarRentalSystem() {
         cars = new ArrayList<>();
