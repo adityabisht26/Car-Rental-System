@@ -6,8 +6,9 @@ class Car {
     private final String model;
     private final double basePricePerDay;
     private boolean isAvailable;
-//Constructor
-    public Car(String carId, String brand, String model, double basePricePerDay) {
+
+    //Constructor
+        public Car(String carId, String brand, String model, double basePricePerDay) {
         this.carId = carId;
         this.brand = brand;
         this.model = model;
@@ -201,7 +202,7 @@ class CarRentalSystem {
 
                 System.out.print("Enter the number of days for rental: ");
                 int rentalDays = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine();
 
                 Customer customer = findOrCreateCustomer(customerName, phoneNumber);
 
@@ -242,7 +243,7 @@ class CarRentalSystem {
                     if (!isCarOk) {
                         System.out.print("Enter the repair cost: ");
                         repairCost = scanner.nextDouble();
-                        scanner.nextLine(); // Consume newline
+                        scanner.nextLine();
                     }
                     returnCar(carToReturn, isCarOk, repairCost);
                 } else {
